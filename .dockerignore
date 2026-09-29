@@ -1,0 +1,21 @@
+# Git
+.git
+.gitignore
+
+# Terraform
+terraform/
+
+# Docker
+.dockerignore
+docker-compose.yml
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# Docs
+README.md
+*.png
+*.jpg

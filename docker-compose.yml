@@ -1,0 +1,23 @@
+services:
+
+  chuka_web:
+    build: .
+    ports:
+      - '5000:5000'
+
+    depends_on:
+      - chuka_db
+    environment:
+      - DATABASE_URL=postgresql://chukauser:chukapassword@chuka_db:5432/chuka_db
+
+  chuka_db:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_USER=chukauser
+      - POSTGRES_PASSWORD=chukapassword
+      - POSTGRES_DB=chuka_db
+    volumes:
+      - chuka_data:/var/lib/postgresql/data
+
+volumes:
+  chuka_data:
