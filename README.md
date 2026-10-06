@@ -25,13 +25,9 @@ A Dockerised Python Flask web application deployed to AWS ECS Fargate using Terr
 
 ## Architecture
 
-Internet
-    ↓
-Application Load Balancer (port 80)
-    ↓
-ECS Fargate Task (Flask container, port 5000)
-    ↓
-AWS ECR (image storage)
+![Architecture diagram](architecture-diagram.png)
+  
+ 
 
 ## Run locally with Docker Compose
 
